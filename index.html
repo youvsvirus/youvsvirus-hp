@@ -35,7 +35,16 @@
 
 
   </head>
-
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | YouVsVirus</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});
+    </script>
 <body>
 
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -53,75 +62,27 @@
         </div>
       </nav>
     <!-- END nav -->
+    
 
-    <section class="home-slider js-fullheight owl-carousel bg-white">
 
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end"  data-scrollax-parent="true">
-            <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/youvsvirus_good.png);">
-                <h3 class="vr">Make a difference</h3>
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                    <h1 class="mb-4"> You vs Virus! <br> Du gegen den Virus: </h1>
-                    <p> Mit dieser Simulation kannst du herausfinden, was dein Handeln bewirkt. Ziel ist es, durch deine Wahl von Aktionen möglichste wenig Leute anzustecken. Und das, sollst du dann auch im täglichen Leben umsetzen - damit DU das Virus besiegst!
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
+<div class="jumbotron">
+  <h1 class="display-4">YouVsVirus! <br> Du gegen den Virus:</h1>
+  <p class="lead">Mit dieser Simulation kannst du herausfinden, was dein Handeln bewirkt. Ziel ist es, durch deine Aktionen möglichste wenig Leute anzustecken.</p>
+  <hr class="mb-4">
+  <p class="lead"> The aim of this simulations is to infect as little people as possible. Your actions matter.</p>
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+
+   <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">YouVsVirus</div>
       </div>
-
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end" data-scrollax-parent="true">
-            <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/youvsvirus_evil.png);">
-                <h3 class="vr">Make a difference</h3>
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-
-                    <h1 class="mb-4"> You vs Virus! <br> Du gegen den Virus: </h1>
-                    <p> Mit dieser Simulation kannst du herausfinden, was dein Handeln bewirkt. Ziel ist es, durch deine Wahl von Aktionen möglichste wenig Leute anzustecken. Und das, sollst du dann auch im täglichen umsetzen - damit DU das Virus besiegst!
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-slider js-fullheight owl-carousel bg-white">
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end" data-scrollax-parent="true">
-            <div class="one-third order-md-last img" style="background-image:url(img/);">
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                    <h1 class="mb-4"> Vermeide Gruppen, rette Leben! </h1>
-                    <p> Mit räumlichem Abstand schützt du nicht nur die ältere Generation und die Kranken. Du schützen auch all die Menschen, die nicht das Privileg haben, im Homeoffice arbeiten zu können. Krankenpfleger:innen, Ärzt:innen, Altenpfleger:innen, Busfahrer:innen, Rettungskräfte und Polizei, Verkäufer:innen im Supermarkt, in der Apotheke, bei den Elektrizitätswerken, die Forscher:innen und und und – bei all den Menschen, die unsere öffentliche Ordnung aufrecht erhalten. <br> Halte also räumlichen Abstand und hilf dadurch Leben zu retten.
-
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
+    </div>
+</div>
 
 
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(img/);" data-stellar-background-ratio="0.5">
@@ -159,100 +120,44 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb">
-        <div class="container">
-            <div class="row justify-content-start mb-5 pb-2">
-          <div class="col-md-4 heading-section ftco-animate">
-            <span class="subheading subheading-with-line"><small class="pr-2 bg-white">Die Simulation</small></span>
-            <h2 class="mb-4">So geht es!</h2>
-          </div>
-          <div class="col-md-8 pl-md-5 heading-section ftco-animate">
-            <div class="pl-md-4 border-line">
+ 
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="img/npc_exposed.png" alt="Exposed NPC" style="width:100px;">
+    <div class="card-body">
+     <h5 class="card-title"> YouVsVirus! <br> Du gegen den Virus: </h5>
+          <p class="card-text">Vom 20.-22.3.2020 fand der bundesweite WirVsVirus-Hackathon statt. Zu dieser kollektiven Initiative hatte die Bundesregierung zusammen mit weiteren Initiatoren aufgerufen. Nach intensiven 48 Stunden stand der erste Prototyp des Spiels in Python zur Verfügung, den ihr unten auf der Homepage findet. Das Entwickler-Team hat noch viele Ideen zum weiteren Ausbau des Spiels und wird sie in den kommenden Wochen umsetzen. Dazu benutzen wir Unity.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/npc_dead.png" alt="Dead NPC" style="width:100px;">
+    <div class="card-body">
+               <h5 class="card-title">Vermeide Gruppen, rette Leben!</h1></h5>
+          <p class="card-text">Mit räumlichem Abstand schützt du nicht nur die ältere Generation und die Kranken. Du schützt auch all die Menschen, die nicht das Privileg haben, im Homeoffice arbeiten zu können. Krankenpfleger:innen, Ärzt:innen, Altenpfleger:innen, Busfahrer:innen, Rettungskräfte und Polizei, Verkäufer:innen im Supermarkt, in der Apotheke, bei den Elektrizitätswerken, die Forscher:innen und und und – alle Menschen, die unsere öffentliche Ordnung aufrecht erhalten. <br> Halte also räumlichen Abstand und hilf dadurch Leben zu retten.</p>        
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/player_exposed.png" alt="Exposed player" style="width:100px;">
+    <div class="card-body">
+        <h5 class="card-title"> Mitmachen! </h5>
+          <p class="card-text">Wenn Du Spaß am Programmieren hast, dann unterstütze uns bei der weiteren Entwicklung von YouVsVirus. Was werden die nächsten Level sein? Atemmasken sammeln und verteilen? Risikopatienten schützen? Wir brauchen Deine Ideen und Deine Programmierbeiträge!</p>
+    </div>
+  </div>
+</div>
 
-                <p>Wähle deine Parameter und starte die Simulation: <br> In welcher Umgebung lebst du? Dorf, Stadtviertel oder Innenstadt? <br> Wähle deine Gruppengröße. <br> Was hast du heute vor? Planst du eine Party oder einen ruhigen Tag auf der Couch? <br> Wähle dein soziales Verhalten</p>
 
-                </div>
-            </div>
-            </div>
-        </div>
-
-        <section class="home-slider js-fullheight owl-carousel bg-white">
-
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end"  data-scrollax-parent="true">
-            <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/youvsvirus_screenshot_1.png);">
-                <h3 class="vr">Shot 1</h3>
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                    <h1 class="mb-4"> Aktion 1 <br> Get ready! </h1>
-                    <p> 
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end" data-scrollax-parent="true">
-            <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/youvsvirus_screenshot_2.png);">
-                <h3 class="vr">Shot 2</h3>
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                    <h1 class="mb-4"> Aktion 2  <br> Rette dich und dein Leben! </h1>
-                    <p> 
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="slider-item js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text  align-items-center justify-content-end" data-scrollax-parent="true">
-            <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/youvsvirus_screenshot_3.png);">
-                <h3 class="vr">Shot 3</h3>
-            </div>
-              <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <div class="text">
-                    <h1 class="mb-4"> Aktion 3  <br> Du hast verloren! </h1>
-                    <p> 
-                    </p>
-                    <!-- Button auskommentiert
-                    <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
-                    -->
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
-
+      
 
   <section class="ftco-section ftco-no-pb">
         <div class="container">
             <div class="row d-md-flex align-items-center">
-                <p><a href="https://www.youtube.com/watch?v=oDnn0FbGIgE" class="btn btn-primary px-4 py-3 mt-3">Hier gehts zum vorläufigen YouTube Video... bis alles fertig ist!</a></p>
+                <p><a href="https://www.youtube.com/watch?v=oDnn0FbGIgE" class="btn btn-primary px-4 py-3 mt-3">Hier geht's zum YouTube Video... unser Pitch beim Hackathon!</a></p>
             </div>
         </div>
 
         <div class="container">
             <div class="row d-md-flex align-items-center">
-                <p><a href="https://github.com/youvsvirus/youvsvirus-game" class="btn btn-primary px-4 py-3 mt-3">Hier gehts zum Source Code </a></p>
+                <p><a href="https://github.com/youvsvirus/youvsvirus-game" class="btn btn-primary px-4 py-3 mt-3">Hier geht's zum Source Code </a></p>
             </div>
         </div>
 
