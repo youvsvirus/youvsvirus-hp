@@ -1,0 +1,387 @@
+<html>
+<head>
+<title>YouVsVirus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  </head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | YouVsVirus</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_first.json", {onProgress: UnityProgress});
+    </script>
+<body>
+ <!--
+      <nav class="navbar navbar-dark bg-dark>
+        <div class="container">
+          <a class="navbar-brand" href="index.html">YouVsVirus</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+
+          <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto style="white"">
+                 <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="index.html" class="nav-link">Impressum</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ -->
+    <!-- END nav -->
+    
+
+
+
+  <div class="card">
+    <div class="card-body">
+     <h5 class="card-title"> <h1 class="display-4"> Test: YouVsVirus! <br> Du gegen das Virus:</h1> </h5>
+          <p class="lead">Mit dieser Simulation kannst du herausfinden, was dein Handeln bewirkt. Ziel ist es, durch deine Aktionen möglichst wenig Leute anzustecken.<br> Lenke den Spieler durch die Benutzung der Pfeiltasten auf der Tastatur.</p>
+     <hr class="mb-4">
+               <p class="lead">The aim of this simulation is to infect as little people as possible. Your actions matter.<br> Use the arrow keys to navigate the player.</p>
+
+    </div>
+  </div>
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="img/npc_healthy.png" alt="npc_healthy" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Gesunder<br> Mitbürger</h5>
+          <p class="card-text"> Ein gesunder Mitbürger, der noch nicht dem Virus ausgesetzt war.</p>
+    </div>
+  </div>
+    <div class="card">
+    <img class="card-img-top" src="img/player_healthy.png" alt="player_healthy" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title">  Gesunder<br> Spieler</h5>
+          <p class="card-text"> Ein gesunder Spieler, der noch nicht dem Virus ausgesetzt war.</p>
+    </div>
+  </div>
+
+    <div class="card">
+    <img class="card-img-top" src="img/npc_exposed.png" alt="npc_healthy" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Angesteckter Mitbürger</h5>
+          <p class="card-text"> Dieser Mitbürger war dem Virus ausgesetzt. Noch zeigt er wenig Symptome.  In der Statistik zählen wir alle Kranken und Angesteckten als &bdquo;Infected&ldquo;.</p>
+    </div>
+  </div>
+    <div class="card">
+    <img class="card-img-top" src="img/player_exposed.png" alt="player_healthy" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Angesteckter Spieler</h5>
+          <p class="card-text">  Der Spieler hat sich mit dem Virus angesteckt, zeigt aber noch wenig Symptome.</p>
+    </div>
+  </div>
+    </div>
+
+      <div class="card-group">
+    <div class="card">
+    <img class="card-img-top" src="img/npc_infectious.png" alt="npc_infectious" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Kranker Mitbürger</h5>
+          <p class="card-text"> Unser Mitbürger ist nun wirklich krank und zeigt deutliche Symptome.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/player_infectious.png" alt="player_infectious" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title">  Kranker Spieler</h5>
+          <p class="card-text"> Unser Spieler ist krank, und man sieht es deutlich. Er leidet unter Fieber, Geschmacksverlust und einem trockenen Husten.</p>
+    </div>
+  </div>    
+    <div class="card">
+    <img class="card-img-top" src="img/recovered.png" alt="recovered" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Erholter Mitbürger</h5>
+          <p class="card-text"> Der Mitbürger hat die Krankheit überstanden und ist nun immun.</p>
+    </div>
+  </div>
+    <div class="card">
+    <img class="card-img-top" src="img/recoveredhat.png" alt="recoveredhat" style="width:50px;">
+    <div class="card-body">
+     <h5 class="card-title"> Erholter<br> Spieler</h5>
+          <p class="card-text"> Unser Spieler hat sich erholt und kann sich nicht noch einmal infizieren.</p>
+    </div>
+  </div>
+</div>
+ </section>
+
+<div class="embed-responsive embed-responsive-16by9">
+      <div class="webgl-content">
+      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">YouVsVirus</div>
+      </div>
+    </div>
+</div>
+
+  <div class="card">
+    <div class="card-body">
+     <h5 class="card-title"> Social Distancing </h5>
+          <p class="lead"> In unserer Simulation halten sich alle Mitbürger mit verschiedener Wahrscheinlichkeit an das vorgegebene Social Distancing. Sich zu nahe zu kommen wird aber immer weiter vermieden, je höher Du diesen Faktor setzt. Das kann glücklicherweise auch dazu führen, dass sich niemand mehr ansteckt.</p>
+    </div>
+  </div>
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="img/1Seite.png" alt="Hackathon" style="width:400px;">
+    <div class="card-body">
+     <h5 class="card-title"> YouVsVirus! Du gegen das Virus! </h5>
+          <p class="card-text">Vom 20.-22.3.2020 fand der bundesweite WirVsVirus-Hackathon statt. Zu dieser kollektiven Initiative hatte die Bundesregierung zusammen mit weiteren Initiatoren aufgerufen. Nach intensiven 48 Stunden stand der erste Prototyp des Spiels in Python zur Verfügung. Den Link dazu findet ihr weiter unten auf der Homepage. Das Entwickler-Team hat noch viele Ideen zum Ausbau des Spiels und wird sie in den kommenden Wochen umsetzen. Dazu benutzen wir nun Unity.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/1.png" alt="Couch" style="width:400px;">
+    <div class="card-body">
+               <h5 class="card-title">Vermeide Gruppen, rette Leben! Stay at home!</h1></h5>
+          <p class="card-text">Mit räumlichem Abstand schützt du nicht nur die ältere Generation und die Kranken. Du schützt auch all die Menschen, die nicht das Privileg haben, im Homeoffice arbeiten zu können. Krankenpfleger:innen, Ärzt:innen, Altenpfleger:innen, Busfahrer:innen, Rettungskräfte und Polizei, Verkäufer:innen im Supermarkt, in der Apotheke, bei den Elektrizitätswerken – alle Menschen, die unsere öffentliche Ordnung aufrecht erhalten.  Halte also räumlichen Abstand und hilf dadurch Leben zu retten.</p>        
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="img/Netflix_cartoon.png" alt="Friends" style="width:400px;">
+    <div class="card-body">
+        <h5 class="card-title"> Mitmachen! Join us! </h5>
+          <p class="card-text">Hast Du auch keine Lust zum fünfzehnten Mal Friends anzusehen? Wenn Du Spaß am Programmieren hast, dann unterstütze uns bei der weiteren Entwicklung von YouVsVirus. Was werden die nächsten Level sein? Atemmasken sammeln und verteilen? Risikopatienten schützen? Wir brauchen Deine Ideen und freuen uns über Deine Beiträge! Klone Dir einfach unser <a href="https://github.com/youvsvirus">Github-Projekt</a> und sei dabei!</p>
+    </div>
+  </div>
+</div>
+  <section class="container-flex">
+        <div class="container">
+            <div class="row d-md-flex  justify-content-center align-items-center">
+                <p><a href="https://www.youtube.com/watch?v=oDnn0FbGIgE" class="btn btn-primary px-4 py-3 mt-3">Hier geht's zum YouTube Video... unser Pitch beim Hackathon!</a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row d-md-flex justify-content-center align-items-center">
+                <p><a href="https://github.com/youvsvirus/youvsvirus-unity" class="btn btn-primary px-4 py-3 mt-3">Hier geht's zum Source Code! </a></p>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div class="row d-md-flex justify-content-center align-items-center">
+                <p><a href=" https://www.dlr.de/sc/desktopdefault.aspx/tabid-1183/13774_read-64418/" class="btn btn-primary px-4 py-3 mt-3">Mehr Infos über den Hackathon und einen Teil des Teams! </a></p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row d-md-flex justify-content-center align-items-center">
+                <p><a href="https://github.com/youvsvirus/youvsvirus-game" class="btn btn-primary px-4 py-3 mt-3">Und hier das Resultat des Hackathons in Python!</a></p>
+            </div>
+        </div>
+    </section>
+
+ 
+
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(img/);" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row d-md-flex align-items-center justify-center">
+                <div class="col-lg-9 align-self-stretch">
+                    <div class="row d-md-flex align-self-stretch ">   
+                 <div class="col-md d-flex  justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="307">0</strong>
+                        <span>Hackathon Gruppe</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex  justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="18">0</strong>
+                        <span>Mitglieder im Team</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex   justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="48">0</strong>
+                        <span>Stunden</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="1">0</strong>
+                        <span>Aufgabe</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="1">0</strong>
+                        <span>Prototyp in Python</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18">
+                      <div class="text">
+                        <strong class="number" data-number="999">0</strong>
+                        <span>Ideen wie es weitergeht</span>
+                      </div>
+                    </div>
+                  </div>
+
+          </div>
+        </div>
+        </div>
+    </section>
+
+ 
+
+
+      
+
+
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+       
+    <h2 id="smileypictures">Smiley pictures</h2>
+
+<ul><font color=white>
+<li>Healthy player: afraid purple smiley from <a href="https://www.pixcove.com/tag/scared/page/5/">pixcove</a></li>
+
+<li>Infected player: Bild von <a href="https://pixabay.com/de/users/iximus-2352783/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4906550">Vektor Kunst iXimus</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4906550">Pixabay</a></li>
+
+<li>Exposed player: Bild von <a href="https://pixabay.com/de/users/BilliTheCat-7996303/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4004029">Nina Garman</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4004029">Pixabay</a></li>
+
+<li>Dead player: 
+Font Awesome Free 5.4.1 by  <a href="https://fontawesome.com">@fontawesome</a> under license <a href="https://creativecommons.org/licenses/by/4.0">CC BY</a></li>
+
+<li>Healthy npc:  <a href="http://pngimg.com/download/36231">Smiley PNG</a> under License: <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons 4.0 BY-NC</a></li>
+
+<li>Exposed npc: Bild von <a href="href="https://pixabay.com/de/users/openclipart-vectors-30363/">OpenClipart-Vectors</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=146094">Pixabay</a></li>
+
+<li>Sick npc: <a href="http://pngimg.com/download/36229">Smiley PNG</a> under License: <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons 4.0 BY-NC</a></li>
+
+
+<li>Dead npc: Modified color, taken from <a href="https://publicdomainvectors.org/en/free-clipart/Vector-illustration-of-cartoon-ghost/15086.html">publicdomainvectors</a></li>
+<li>Background image by <a href="https://pixabay.com/users/Endho-2065768/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4970643">Ratna Fitry</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4970643">Pixabay</a></li>
+
+<li>Map: Daten von <a href="http://www.openstreetmap.org">OpenStreetMap</a> - Veröffentlicht unter <a href="http://opendatacommons.org/licenses/odbl/">ODbl</a></li>
+</ul>
+
+            </div>
+          </div>
+          
+          <!--
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Architectural Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Interior Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Exterior Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Lighting Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>AutoCAD Service</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Newsletter</h2>
+                <p>Far far away, behind the word mountains, far from the countries.</p>
+              <form action="#" class="subscribe-form">
+                <div class="form-group">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        -->
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+ <script src="js/main.js"></script>
+    
+  </body>
+</html>
+
