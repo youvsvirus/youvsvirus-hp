@@ -43,9 +43,10 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});     
     </script>
 <body>
+
  <!--
       <nav class="navbar navbar-dark bg-dark>
         <div class="container">
@@ -164,9 +165,18 @@
 </div>
 </div>
   </div>
-    </div>
  </section>
-<div class="embed-responsive embed-responsive-16by9">
+ <div id="game" class="container  mt-5 justify-content-center">
+  <div class="row justify-content-center">
+   <div class="card bg-custom-1 mt-5 align-items-center">
+    <div class="card-body">
+     <h5 class="card-title"> Mit  	&laquo;f&raquo; geht's zum Fullscreen! </h5>
+   <p><a href="#gameplay" class="btn btn-primary  mt-3">Zeig mir erst die Regeln!</a></p>
+       </div>
+    </div>
+           </div>
+    </div>
+<div class="embed-responsive embed-responsive-16by9 mt-n5">
    <div class="webgl-content">
       <div id="unityContainer" align="center" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -176,15 +186,40 @@
       </div>
     </div>
 </div>
-
-
+<script> // handles full screen for webGL when pressingf f
+    function launchIntoFullscreen(element) {
+        if(element.requestFullscreen) /* API spec */
+        {
+            element.requestFullscreen();
+        } 
+        else if(element.mozRequestFullScreen) /* Firefox */
+        { 
+            element.mozRequestFullScreen();
+        } 
+        else if(element.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            element.webkitRequestFullscreen();
+        } 
+        else if(element.msRequestFullscreen) { /* IE/Edge */
+            element.msRequestFullscreen();
+        }
+    }
+    // Launch fullscreen for browsers that support it!
+    document.addEventListener("keydown", function(e) 
+    {
+        if (e.keyCode == 70)  // if f is pressed
+        {
+            launchIntoFullscreen(document.getElementById("unityContainer")); 
+        }
+    }, false);
+</script>
   <div class="card">
     <div class="card-body">
-     <h5 class="card-title"> Game Play </h5>
+     <h5 id="gameplay" class="card-title"> Game Play </h5>
            <p class="card-text">
               <ul>
             <li>Lenke den Spieler durch die Benutzung der Pfeiltasten auf der Tastatur.</li>
             <li>Q-Taste beendet das Level.</li>
+            <li>F-Taste startet Vollbildmodus.</li>
             <li>Esc-Taste beendet den Vollbildmodus.</li>
              <li><b>Explore</b>
                 <ul>
@@ -201,7 +236,8 @@
                     <li>Wie im wahren Leben kannst Du den Emojis nicht mehr ansehen, ob sie gesund oder infiziert sind.</li>
                 </ul>
             </li>
-        </ul> </p>          
+        </ul> </p>   
+          <p><a href="#game" class="btn btn-primary  mt-3">Zurück zum Spiel!</a></p>
     </div>
   </div>
 <div class="card-deck">
