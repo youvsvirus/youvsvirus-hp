@@ -43,9 +43,10 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});     
     </script>
 <body>
+
  <!--
       <nav class="navbar navbar-dark bg-dark>
         <div class="container">
@@ -78,7 +79,7 @@
       </li>
     </ul>
     <span class="navbar-text">
-    Stay home.
+    Stay safe.
     </span>
   </div>
 </nav>
@@ -164,9 +165,18 @@
 </div>
 </div>
   </div>
-    </div>
  </section>
-<div class="embed-responsive embed-responsive-16by9">
+ <div id="game" class="container  mt-5 justify-content-center">
+  <div class="row justify-content-center">
+   <div class="card bg-custom-1 mt-5 align-items-center">
+    <div class="card-body">
+     <h5 class="card-title"> Mit  	&laquo;f&raquo; geht's zum Fullscreen! </h5>
+   <p><a href="#gameplay" class="btn btn-primary  mt-3">Zeig mir erst die Regeln!</a></p>
+       </div>
+    </div>
+           </div>
+    </div>
+<div class="embed-responsive embed-responsive-16by9 mt-n5">
    <div class="webgl-content">
       <div id="unityContainer" align="center" style="width: 960px; height: 600px"></div>
       <div class="footer">
@@ -176,17 +186,42 @@
       </div>
     </div>
 </div>
-
-
+<script> // handles full screen for webGL when pressingf f
+    function launchIntoFullscreen(element) {
+        if(element.requestFullscreen) /* API spec */
+        {
+            element.requestFullscreen();
+        } 
+        else if(element.mozRequestFullScreen) /* Firefox */
+        { 
+            element.mozRequestFullScreen();
+        } 
+        else if(element.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            element.webkitRequestFullscreen();
+        } 
+        else if(element.msRequestFullscreen) { /* IE/Edge */
+            element.msRequestFullscreen();
+        }
+    }
+    // Launch fullscreen for browsers that support it!
+    document.addEventListener("keydown", function(e) 
+    {
+        if (e.keyCode == 70)  // if f is pressed
+        {
+            launchIntoFullscreen(document.getElementById("unityContainer")); 
+        }
+    }, false);
+</script>
   <div class="card">
     <div class="card-body">
-     <h5 class="card-title"> Game Play </h5>
+     <h5 id="gameplay" class="card-title"> Game Play </h5>
            <p class="card-text">
               <ul>
             <li>Lenke den Spieler durch die Benutzung der Pfeiltasten auf der Tastatur.</li>
             <li>Q-Taste beendet das Level.</li>
+            <li>F-Taste startet den Vollbildmodus.</li>
             <li>Esc-Taste beendet den Vollbildmodus.</li>
-             <li><b>Sandbox</b>
+             <li><b>Explore</b>
                 <ul>
                     <li>Dein Ziel ist es, Dich selbst nicht zu infizieren. Und wenn es Dich dann doch getroffen hat, solltest Du möglichst wenig andere Emojis anstecken.</li>
                      <li>   In unserer Simulation halten sich alle Mitbürger mit verschiedener Wahrscheinlichkeit an das vorgegebene Social-Distancing.
@@ -201,7 +236,8 @@
                     <li>Wie im wahren Leben kannst Du den Emojis nicht mehr ansehen, ob sie gesund oder infiziert sind.</li>
                 </ul>
             </li>
-        </ul> </p>          
+        </ul> </p>   
+          <p><a href="#game" class="btn btn-primary  mt-3">Zurück zum Spiel!</a></p>
     </div>
   </div>
 <div class="card-deck">
@@ -329,7 +365,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
        
-    <h2 id="smileypictures">Sources of Pictures</h2>
+    <h2 id="smileypictures">Sources of Pictures, Maps & Music</h2>
 
 <ul><font color=white>
 <li>Healthy player from <a href="https://www.pixcove.com/tag/scared/page/5/">pixcove</a></li>
@@ -382,6 +418,12 @@ by Phantom Open Emoji maintainers and contributors, <a href="https://creativecom
 
 <li>Barrier by <a href="https://pixabay.com/de/users/succo-96729/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2309828">succo</a> from <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2309828">Pixabay</a></li>
 <li>Corona-emoji-sun by <a href="https://pixabay.com/de/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5135070">Gordon Johnson</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5135070">Pixabay</a></li>
+<li> Arrow key image by <a href="https://pixabay.com/users/TariqMK-5124394/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3860988">TariqMK</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3860988">Pixabay</a></li>
+<li> Q block by <a href="https://pixabay.com/users/TheDigitalArtist-202249/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1084824">Pete Linforth</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1084824">Pixabay</a></li>
+<li> Esc-key from <a href="https://commons.wikimedia.org/wiki/File:Escape_button_(1805979530).jpg" title="via Wikimedia Commons">Peter Shanks from Hobart, Australia</a> / <a href="https://creativecommons.org/licenses/by/2.0">CC BY</a></li>
+<li> Broken glass by <a href="https://pixabay.com/users/kirahoffmann-1855684/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1497233">Kira Hoffmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1497233">Pixabay</a></li>
+<li> Sun glasses by <a href="https://pixabay.com/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=304365">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=304365">Pixabay</a></li>
+<li> Music in disco is <a href="https://freemusicarchive.org/music/Lomz__Lezet/Mother_Brain/Lomz_and_Lezet-Mother_Brain_08_Cod">Cod</a> from the album <a href="https://freemusicarchive.org/music/Lomz__Lezet/Mother_Brain">Mother Brain</a> by Lomz & Lezet and is licensed under a  <a href="https://creativecommons.org/licenses/by-nc-sa/3.0">CC BY-NC-SA 3.0</a></li> 
 </ul>
 
             </div>
