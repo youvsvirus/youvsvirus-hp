@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <title>YouVsVirus</title>
     <meta charset="utf-8">
@@ -44,6 +44,14 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});     
+    </script>
+    <script>
+      var ua = window.navigator.userAgent;
+      var trident = ua.indexOf('Trident/');
+      var msie = ua.indexOf('MSIE ');
+      if (trident > 0 || msie > 0) {
+        alert("Unfortunately, this homepage does not work with Internet Explorer. Please use a different browser such as Firefox, Chrome or MS Edge.");
+      }
     </script>
 <body>
 
