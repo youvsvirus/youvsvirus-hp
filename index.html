@@ -43,7 +43,7 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/YouVsVirus_WebGL_v0.1_15-04-2020.json", {onProgress: UnityProgress});     
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/youvsvirusrelease.json", {onProgress: UnityProgress});
     </script>
     <script>
       var ua = window.navigator.userAgent;
@@ -185,8 +185,8 @@
            </div>
     </div>
 <div class="embed-responsive embed-responsive-16by9 mt-n5">
-   <div class="webgl-content">
-      <div id="unityContainer" align="center" style="width: 960px; height: 600px"></div>
+      <div class="webgl-content">
+      <div id="unityContainer" style="width: 1024px; height: 576px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
@@ -244,7 +244,9 @@
                     <li>Wie im wahren Leben kannst Du den Emojis nicht mehr ansehen, ob sie gesund oder infiziert sind.</li>
                 </ul>
             </li>
-        </ul> </p>   
+        </ul> 
+            <b>Vielen Dank</b> an unsere grandiosen Spieletester!           
+        </p>   
           <p><a href="#game" class="btn btn-primary  mt-3">Zurück zum Spiel!</a></p>
     </div>
   </div>
